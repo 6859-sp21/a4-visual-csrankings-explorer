@@ -1,0 +1,1526 @@
+{
+   "AUEB": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "Aalborg University": {
+      "region": "europe",
+      "countryabbrv": "dk"
+   },
+   "Aalto University": {
+      "region": "europe",
+      "countryabbrv": "fi"
+   },
+   "Aarhus University": {
+      "region": "europe",
+      "countryabbrv": "dk"
+   },
+   "Aberystwyth University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "American University in Cairo": {
+      "region": "africa",
+      "countryabbrv": "eg"
+   },
+   "American University of Beirut": {
+      "region": "asia",
+      "countryabbrv": "lb"
+   },
+   "Ariel University": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Australian National University": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "BITS Pilani": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "BUET": {
+      "region": "asia",
+      "countryabbrv": "bd"
+   },
+   "Babeș-Bolyai University": {
+      "region": "europe",
+      "countryabbrv": "ro"
+   },
+   "Bar-Ilan University": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Bauhaus University Weimar": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Beihang University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Ben-Gurion University of the Negev": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Bielefeld University": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Bilkent University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Birkbeck University of London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Bocconi University": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "Boğaziçi University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Brandenburg University of Technology": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Brno University of Technology": {
+      "region": "europe",
+      "countryabbrv": "cz"
+   },
+   "Brunel University London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Bundeswehr University Munich": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "CISPA Helmholtz Center": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "CMI": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "CRIStAL": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "CWI": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Cardiff University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Carleton University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Chalmers/GU": {
+      "region": "europe",
+      "countryabbrv": "se"
+   },
+   "Charles University": {
+      "region": "europe",
+      "countryabbrv": "cz"
+   },
+   "Chinese Academy of Sciences": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Chinese University of Hong Kong": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "Chulalongkorn University": {
+      "region": "asia",
+      "countryabbrv": "th"
+   },
+   "City University of Hong Kong": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "City University of London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Concordia University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Cyprus University of Technology": {
+      "region": "europe",
+      "countryabbrv": "cy"
+   },
+   "Czech Technical University": {
+      "region": "europe",
+      "countryabbrv": "cz"
+   },
+   "DAIICT": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "DTU": {
+      "region": "europe",
+      "countryabbrv": "dk"
+   },
+   "Dalhousie University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "De La Salle University": {
+      "region": "asia",
+      "countryabbrv": "ph"
+   },
+   "Durham University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "EPFL": {
+      "region": "europe",
+      "countryabbrv": "ch"
+   },
+   "ETH Zurich": {
+      "region": "europe",
+      "countryabbrv": "ch"
+   },
+   "ETS Montreal": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "EURECOM": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Ecole Normale Superieure": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Ecole Normale Superieure de Cachan": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Ecole Normale Superieure de Lyon": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Ecole Normale Superieure de Rennes": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Federal University of Rio Grande": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "Freie Universitaet Berlin": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Friedrich Schiller University Jena": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Fudan University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Goethe University Frankfurt": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Goldsmiths University of London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Graz University of Technology": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "HEC Montreal": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "HKUST": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "Hacettepe University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Hamburg University of Technology": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Hanyang University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "Harbin Institute of Technology": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Hasso Plattner Institute": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Hebrew University of Jerusalem": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Heidelberg University": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Heriot-Watt University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Hong Kong Baptist University": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "Humboldt University of Berlin": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Hunan University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "IIIT Bangalore": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIIT Delhi": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIIT Hyderabad": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IISc Bangalore": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT (BHU) Varanasi": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Bhubaneswar": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Bombay": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Delhi": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Gandhinagar": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Guwahati": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Hyderabad": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Indore": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Jodhpur": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Kanpur": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Kharagpur": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Madras": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Mandi": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Patna": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Roorkee": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IIT Ropar": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IMDEA Networks Institute": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "IMDEA Software Institute": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "IMSc": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "IPI PAN": {
+      "region": "europe",
+      "countryabbrv": "pl"
+   },
+   "IPM": {
+      "region": "asia",
+      "countryabbrv": "ir"
+   },
+   "IST Austria": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "IT University of Copenhagen": {
+      "region": "europe",
+      "countryabbrv": "dk"
+   },
+   "IUST": {
+      "region": "asia",
+      "countryabbrv": "ir"
+   },
+   "Imperial College London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Istanbul Technical University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Izmir Institute of Technology": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "JKU Linz": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "JUST": {
+      "region": "asia",
+      "countryabbrv": "jo"
+   },
+   "Jacobs University Bremen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "KAIST": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "KAUST": {
+      "region": "asia",
+      "countryabbrv": "sa"
+   },
+   "KMUTNB": {
+      "region": "asia",
+      "countryabbrv": "th"
+   },
+   "KTH Royal Institute of Technology": {
+      "region": "europe",
+      "countryabbrv": "se"
+   },
+   "KU Leuven": {
+      "region": "europe",
+      "countryabbrv": "be"
+   },
+   "Karlsruhe Institute of Technology": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Keio University": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "King Abdulaziz University": {
+      "region": "asia",
+      "countryabbrv": "sa"
+   },
+   "King's College London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Korea University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "Koç University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Kyoto University": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "Kyung Hee University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "Kyungpook National University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "LMU Munich": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "LUMS": {
+      "region": "asia",
+      "countryabbrv": "pk"
+   },
+   "Lancaster University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Lebanese American University": {
+      "region": "asia",
+      "countryabbrv": "lb"
+   },
+   "Leiden University": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Loughborough University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Lund University": {
+      "region": "europe",
+      "countryabbrv": "se"
+   },
+   "Maastricht University": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Macquarie University": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "Masaryk University": {
+      "region": "europe",
+      "countryabbrv": "cz"
+   },
+   "Masdar Institute": {
+      "region": "asia",
+      "countryabbrv": "ae"
+   },
+   "Massey University": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "Max Planck Society": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "McGill University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "McMaster University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Memorial University of Newfoundland": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Middle East Technical University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Middlesex University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Monash University": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "NTNU": {
+      "region": "europe",
+      "countryabbrv": "no"
+   },
+   "NTUA": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "NWPU": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "NYU Shanghai": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Nanjing University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Nanyang Technological University": {
+      "region": "asia",
+      "countryabbrv": "sg"
+   },
+   "National Cheng Kung University": {
+      "region": "asia",
+      "countryabbrv": "tw"
+   },
+   "National Chiao Tung University": {
+      "region": "asia",
+      "countryabbrv": "tw"
+   },
+   "National Taiwan University": {
+      "region": "asia",
+      "countryabbrv": "tw"
+   },
+   "National Tsing Hua University": {
+      "region": "asia",
+      "countryabbrv": "tw"
+   },
+   "National University of Singapore": {
+      "region": "asia",
+      "countryabbrv": "sg"
+   },
+   "Newcastle University": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Ontario Tech University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Open University UK": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Osaka University": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "POSTECH": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "PUC-RIO": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "PUC-RS": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "Paderborn University": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Peking University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Politecnico di Milano": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "Polytechnic University of Catalonia": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "Polytechnique Montreal": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Qatar Computing Research Institute": {
+      "region": "asia",
+      "countryabbrv": "qa"
+   },
+   "Qatar University": {
+      "region": "asia",
+      "countryabbrv": "qa"
+   },
+   "Queen Mary University of London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Queen's University Belfast": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Queen’s University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "RMIT University": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "RWTH Aachen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Radboud University": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Renmin University of China": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Royal Holloway University of London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "Royal Military College of Canada": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Ruhr-University Bochum": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Ryerson University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "SUFE": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "SUTD": {
+      "region": "asia",
+      "countryabbrv": "sg"
+   },
+   "Saarland University": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "Sabancı University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Sapienza University of Rome": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "Scuola Superiore Sant'Anna": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "Seoul National University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "Shandong University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Shanghai Jiao Tong University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "ShanghaiTech University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Sharif University of Technology": {
+      "region": "asia",
+      "countryabbrv": "ir"
+   },
+   "Shenzhen University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Simon Fraser University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Simula UiB": {
+      "region": "europe",
+      "countryabbrv": "no"
+   },
+   "Singapore Management University": {
+      "region": "asia",
+      "countryabbrv": "sg"
+   },
+   "Stellenbosch University": {
+      "region": "africa",
+      "countryabbrv": "za"
+   },
+   "Sun Yat-sen University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "TU Berlin": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Braunschweig": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Chemnitz": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Clausthal": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Crete": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "TU Darmstadt": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Delft": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "TU Dortmund": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Dresden": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Eindhoven": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "TU Freiberg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Ilmenau": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Kaiserslautern": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Munich": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "TU Wien": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "Tata Inst. of Fundamental Research": {
+      "region": "asia",
+      "countryabbrv": "in"
+   },
+   "Technion": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Tel Aviv University": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Texas A&M at Qatar": {
+      "region": "asia",
+      "countryabbrv": "qa"
+   },
+   "The Hong Kong Polytechnic University": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "Tilburg University": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Tokyo Institute of Technology": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "Tongji University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Tsinghua University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "UESTC": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "UFF": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFMG": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFMS": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFPE": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFRGS": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFRJ": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UFU": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UNICAMP": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "UNIST": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "UNSW": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "USP": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "USP-ICMC": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "USTC": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Universidad Nacional de Córdoba": {
+      "region": "southamerica",
+      "countryabbrv": "ar"
+   },
+   "Universidad Rey Juan Carlos": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "Universidad de Chile": {
+      "region": "southamerica",
+      "countryabbrv": "cl"
+   },
+   "Universidad de Zaragoza": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "Universidad de los Andes": {
+      "region": "southamerica",
+      "countryabbrv": "co"
+   },
+   "Universidade Federal de Viçosa": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "Universidade NOVA de Lisboa": {
+      "region": "europe",
+      "countryabbrv": "pt"
+   },
+   "Universidade de Brasília": {
+      "region": "southamerica",
+      "countryabbrv": "br"
+   },
+   "Universidade de Lisboa": {
+      "region": "europe",
+      "countryabbrv": "pt"
+   },
+   "University College London": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of A Coruña": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "University of Aberdeen": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Adelaide": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Alberta": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Amsterdam": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "University of Athens": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "University of Auckland": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "University of Augsburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Bamberg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Bath": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Bayreuth": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Bergen": {
+      "region": "europe",
+      "countryabbrv": "no"
+   },
+   "University of Bern": {
+      "region": "europe",
+      "countryabbrv": "ch"
+   },
+   "University of Birmingham": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Bonn": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Bremen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Bristol": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of British Columbia": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Buenos Aires": {
+      "region": "southamerica",
+      "countryabbrv": "ar"
+   },
+   "University of Calgary": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Cambridge": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Canterbury": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "University of Cape Town": {
+      "region": "africa",
+      "countryabbrv": "za"
+   },
+   "University of Chinese Academy of Sciences": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "University of Copenhagen": {
+      "region": "europe",
+      "countryabbrv": "dk"
+   },
+   "University of Crete": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "University of Duisburg-Essen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Dundee": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Düsseldorf": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Edinburgh": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Erlangen–Nuremberg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Essex": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Exeter": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Freiburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Glasgow": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Groningen": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "University of Guelph": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Göttingen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Haifa": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "University of Halle-Wittenberg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Hamburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Hannover": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Helsinki": {
+      "region": "europe",
+      "countryabbrv": "fi"
+   },
+   "University of Hildesheim": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Hong Kong": {
+      "region": "asia",
+      "countryabbrv": "hk"
+   },
+   "University of Ioannina": {
+      "region": "europe",
+      "countryabbrv": "gr"
+   },
+   "University of Jordan": {
+      "region": "asia",
+      "countryabbrv": "jo"
+   },
+   "University of Kassel": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Kent": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Kiel": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Koblenz-Landau": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Konstanz": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of L'Aquila": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "University of Leeds": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Leipzig": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Liverpool": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Luxembourg": {
+      "region": "europe",
+      "countryabbrv": "lu"
+   },
+   "University of Lübeck": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Magdeburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Mainz": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Malaya": {
+      "region": "asia",
+      "countryabbrv": "my"
+   },
+   "University of Malta": {
+      "region": "europe",
+      "countryabbrv": "mt"
+   },
+   "University of Manchester": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Manitoba": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Mannheim": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Marburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Melbourne": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Molise": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "University of Montreal": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Murcia": {
+      "region": "europe",
+      "countryabbrv": "es"
+   },
+   "University of Münster": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of New Brunswick": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Newcastle": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Nicosia": {
+      "region": "europe",
+      "countryabbrv": "cy"
+   },
+   "University of Nottingham": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Oldenburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Osnabrück": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Otago": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "University of Ottawa": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Oxford": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Passau": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Pisa": {
+      "region": " europe",
+      "countryabbrv": "it"
+   },
+   "University of Potsdam": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Queensland": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Regina": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Rostock": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Salerno": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "University of Salzburg": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "University of Sannio": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "University of Saskatchewan": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Sheffield": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Siegen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Southampton": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of St Andrews": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Stuttgart": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Surrey": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Sussex": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Sydney": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Szeged": {
+      "region": "europe",
+      "countryabbrv": "hu"
+   },
+   "University of Tartu": {
+      "region": "europe",
+      "countryabbrv": "ee"
+   },
+   "University of Technology Sydney": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Tokyo": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "University of Toronto": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Trento": {
+      "region": "europe",
+      "countryabbrv": "it"
+   },
+   "University of Trier": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Tsukuba": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "University of Twente": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "University of Tübingen": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Ulm": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Victoria": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Vienna": {
+      "region": "europe",
+      "countryabbrv": "at"
+   },
+   "University of Waikato": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "University of Warsaw": {
+      "region": "europe",
+      "countryabbrv": "pl"
+   },
+   "University of Warwick": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Waterloo": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Western Australia": {
+      "region": "australasia",
+      "countryabbrv": "au"
+   },
+   "University of Windsor": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "University of Wroclaw": {
+      "region": "europe",
+      "countryabbrv": "pl"
+   },
+   "University of Wuppertal": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of Würzburg": {
+      "region": "europe",
+      "countryabbrv": "de"
+   },
+   "University of York": {
+      "region": "europe",
+      "countryabbrv": "uk"
+   },
+   "University of Zurich": {
+      "region": "europe",
+      "countryabbrv": "ch"
+   },
+   "Università della Svizzera italiana": {
+      "region": "europe",
+      "countryabbrv": "ch"
+   },
+   "Université Jean Monnet": {
+      "region": "europe",
+      "countryabbrv": "fr"
+   },
+   "Université de Sherbrooke": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Université libre de Bruxelles": {
+      "region": "europe",
+      "countryabbrv": "be"
+   },
+   "Uppsala University": {
+      "region": "europe",
+      "countryabbrv": "se"
+   },
+   "Utrecht University": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "VU Amsterdam": {
+      "region": "europe",
+      "countryabbrv": "nl"
+   },
+   "Victoria University of Wellington": {
+      "region": "australasia",
+      "countryabbrv": "nz"
+   },
+   "Waseda University": {
+      "region": "asia",
+      "countryabbrv": "jp"
+   },
+   "Weizmann Institute of Science": {
+      "region": "europe",
+      "countryabbrv": "il"
+   },
+   "Western University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Westlake University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Wuhan University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   },
+   "Yonsei University": {
+      "region": "asia",
+      "countryabbrv": "kr"
+   },
+   "York University": {
+      "region": "canada",
+      "countryabbrv": "ca"
+   },
+   "Yıldız Technical University": {
+      "region": "europe",
+      "countryabbrv": "tr"
+   },
+   "Zhejiang University": {
+      "region": "asia",
+      "countryabbrv": "cn"
+   }
+}
