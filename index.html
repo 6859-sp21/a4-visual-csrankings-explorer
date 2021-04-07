@@ -8,8 +8,32 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
 </head>
 <body>
+    <main>
+        <div id='title'>
+            <h1> Visual CSRankings Explorer </h1>
+        </div>
+        <div id='controls'>
+            <div id='selected-venues'>
+            </div>
+        </div>
+        <div id='charts'>
+            <div id='bubble-chart-container'>
+                <h4> Universities Sized By Publications In Selected Venues</h3>
+                <div id='bubble-chart'></div>
+            </div>
+            <div id='bar-chart-container'>
+                <h4> Faculty Publications By Selected Venues</h3>
+                <div id='bar-chart'></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/@observablehq/stdlib@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.6.2/d3.min.js" integrity="sha512-L2eTGYYQqzK5YozYyUVrJKj2ZRnHE3QzV1+1yY6VXHExStF3potRZyEcD/B6sTOe04xYxB21QNLmVTQFcgwovg==" crossorigin="anonymous"></script>
     <script src='js/utils.js'></script>
     <script src='js/data.js'></script>
+    <script src='js/venues.js'></script>
+    <script src='js/bubble-chart.js'></script>
+    <script src='js/bar-chart.js'></script>
     <script src='js/index.js'></script>
 </body>
 </html>

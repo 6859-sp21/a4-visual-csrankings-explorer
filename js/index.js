@@ -1,6 +1,7 @@
 (async function(){
     await DataService.initialize();
-    const selectedVenues = DataService.getSelectedVenues();
-    const data = DataService.generateData({ selectedVenues });
-    console.log(data);
+    const venues = DataService.getVenues();
+    Venues.initialize(venues);
+    const bubbleChartData = DataService.generateData();
+    BubbleChart.render({ data: bubbleChartData });
 })()

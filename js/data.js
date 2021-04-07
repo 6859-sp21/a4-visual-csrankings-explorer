@@ -9,12 +9,13 @@ const DataService = (function(){
         venueInfo = await Utils.fetchJson('/data/venue-info.json');
     }
 
-    function getSelectedVenues() {
-        return Object.keys(venueInfo);
+    function getVenues() {
+        return venueInfo;
     }
 
-    function generateData({ selectedVenues }) {
-        const universityInfo = {};
+    function generateData() {
+        const selectedVenues = Venues.getSelected();
+        const keyedUniversityInfo = {};
         authorInfo.forEach(entry => {
             const university = entry.dept;
             const venue = entry.area;
@@ -22,34 +23,54 @@ const DataService = (function(){
             const author = entry.name;
             if (_isSelectedVenue({ selectedVenues, venue }) && _isUSUnversity(university)) {
                 let universityEntry;
-                if (universityInfo[university]) {
-                    universityEntry = universityInfo[university];
+                if (keyedUniversityInfo[university]) {
+                    universityEntry = keyedUniversityInfo[university];
                 } else {
                     universityEntry = {
-                        publications: 0,
+                        total: 0,
+                        venues: {},
                         faculty: {}
                     };
-                    universityInfo[university] = universityEntry
+                    keyedUniversityInfo[university] = universityEntry;
+                    selectedVenues.forEach(venue => {
+                        universityEntry.venues[venue] = 0;
+                    });
                 }
-                universityEntry.publications += venueCount;
+                universityEntry.total += venueCount;
+                universityEntry.venues[venue] += venueCount;
                 let facultyEntry;
                 if (universityEntry.faculty[author]) {
                     facultyEntry = universityEntry.faculty[author]
                 } else {
                     facultyEntry = {
-                        publications: 0,
-                        venues: {}
+                        total: 0
                     };
                     selectedVenues.forEach(venue => {
-                        facultyEntry.venues[venue] = 0;
+                        facultyEntry[venue] = 0;
                     });
                     universityEntry.faculty[author] = facultyEntry;
                 }
-                universityEntry.faculty[author].publications += venueCount;
-                universityEntry.faculty[author].venues[venue] += venueCount;
+                universityEntry.faculty[author].total += venueCount;
+                universityEntry.faculty[author][venue] += venueCount;
             }
         });
-        return universityInfo;
+        const universityInfoArray = Object.keys(keyedUniversityInfo)
+            .map((university) => {
+                const faculty = Object.keys(keyedUniversityInfo[university].faculty)
+                    .map(faculty => {
+                        return {
+                            name: faculty,
+                            ...keyedUniversityInfo[university].faculty[faculty]
+                        }
+                    })
+                return {
+                    name: university,
+                    ...keyedUniversityInfo[university],
+                    faculty
+                }
+            });
+        
+        return universityInfoArray
     }
 
     function _isUSUnversity(university) {
@@ -62,7 +83,7 @@ const DataService = (function(){
 
     return {
         initialize,
-        getSelectedVenues,
+        getVenues,
         generateData
     }
 })();
