@@ -4,9 +4,9 @@ const DataService = (function(){
     let venueInfo;
 
     async function initialize() {
-        authorInfo = await Utils.fetchJson('/data/generated-author-info.json');
-        countryInfo = await Utils.fetchJson('/data/country-info.json');
-        venueInfo = await Utils.fetchJson('/data/venue-info.json');
+        authorInfo = await Utils.fetchJson('./data/generated-author-info.json');
+        countryInfo = await Utils.fetchJson('./data/country-info.json');
+        venueInfo = await Utils.fetchJson('./data/venue-info.json');
     }
 
     function getVenues() {

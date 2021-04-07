@@ -29,13 +29,9 @@ const BarChart = (function() {
                             .attr("fill", d => color(d.key))
                 },
                 update => {
-                    console.log("SERIES UPDATE")
-                    console.log(update);
                     return update;
                 },
                 exit => {
-                    console.log("SERIES EXIT")
-                    console.log(exit)
                     return exit.remove();
                 }
             )
