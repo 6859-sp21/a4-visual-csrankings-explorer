@@ -1,11 +1,12 @@
 const BarChart = (function() {
     const width = 500;
-    const height = 500;
+    const height = width;
     const margin = { top: 30, right: 10, bottom: 0, left: 30 };
     const svg = d3.select("#bar-chart")
         .append("svg")
         .attr("viewBox", [0, 0, width, height]);
     const xAxis =  svg.append("g");
+    const yAxis = svg.append("g");
     const stackContainer = svg.append("g");
     const legend = svg.append("g")
         .attr("font-family", "sans-serif")
@@ -13,6 +14,7 @@ const BarChart = (function() {
         .attr("text-anchor", "end")
 
     function render({ data, selectedVenues }) {
+        console.log(data)
         const series = _series(data);
         const color = _color(series.map(d => d.key));
         const legendColor = _color(selectedVenues);
@@ -27,6 +29,24 @@ const BarChart = (function() {
                     return enter
                         .append("g")
                             .attr("fill", d => color(d.key))
+                        .selectAll("rect")
+                            .data(d => d)
+                            .join(
+                                enter => enter
+                                    .append("rect")
+                                        .attr("x", d => x(d[0]))
+                                        .attr("y", d => y(d.data.initials))
+                                        .attr("width", d => x(d[1]) - x(d[0]))
+                                        .attr("height", y.bandwidth())
+                                ,
+                                update => update,
+                                exit => exit.remove()
+                            )
+                            .on("click", (event, d) => {
+                                const facultyData = DataService.getFacultyInfo(d.data.name);
+                                const homepage = facultyData[0].homepage;
+                                window.open(homepage, '_blank');
+                            })
                 },
                 update => {
                     return update;
@@ -35,24 +55,10 @@ const BarChart = (function() {
                     return exit.remove();
                 }
             )
-            .selectAll("rect")
-                .data(d => d)
-                .join(
-                    enter => enter
-                        .append("rect")
-                            .attr("x", d => x(d[0]))
-                            .attr("y", d => y(d.data.name))
-                            .attr("width", d => x(d[1]) - x(d[0]))
-                            .attr("height", y.bandwidth())
-                        .append("title")
-                            .text(d => `${d.data.name}`)
-                    ,
-                    update => update,
-                    exit => exit.remove()
-                )
 
-        xAxis.call(_xAxis.bind(null, { x, width}));   
-
+        xAxis.call(_xAxis.bind(null, { x, width}));  
+        yAxis.call(_yAxis.bind(null, { y }));
+    
         const legendGroup = legend.selectAll("g")
             .data(selectedVenues)
             .join(
@@ -80,7 +86,7 @@ const BarChart = (function() {
 
     function _series(data) {
         const sample = data[0];
-        const exclude = ['name', 'total'];
+        const exclude = ['name', 'total', 'initials'];
         const keys = Object.keys(sample).filter(key =>  !exclude.includes(key));
         return d3.stack()
             .keys(keys)
@@ -90,7 +96,7 @@ const BarChart = (function() {
 
     function _y({ data, height }) {
         return d3.scaleBand()
-            .domain(data.map(d => d.name))
+            .domain(data.map(d => d.initials))
             .range([margin.top, height - margin.bottom])
             .padding(0.08)
     }
@@ -104,7 +110,7 @@ const BarChart = (function() {
     function _color(data) {
         return d3.scaleOrdinal()
             .domain(data)
-            .range(d3.schemeTableau10.slice(1))
+            .range(d3.schemeTableau10.slice(0, 8))
             .unknown("#ccc")
     }
 

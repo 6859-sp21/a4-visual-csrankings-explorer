@@ -23,8 +23,13 @@ main > * {
 
 #charts {
     display: flex;
-    width: 100%;
-    height: 100%;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
 }
 
 #bubble-chart-container {
@@ -33,10 +38,40 @@ main > * {
 
 #bar-chart-container {
     flex: 45%;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
+
+#controls {
     display: flex;
-    flex-direction: column;
 }
 
 #selected-venues {
     display: flex;
+}
+
+#time-period {
+    display: flex;
+}
+
+#charts h4 {
+    text-align: center;
+}
+
+.chart {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.chart svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

@@ -3,27 +3,32 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Visual CRankings Explorer</title>
+    <title>Blind CRankings.org Explorer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
 </head>
 <body>
     <main>
         <div id='title'>
-            <h1> Visual CSRankings Explorer </h1>
+            <h1> Blind CSRankings.org Explorer </h1>
+            <p>
+                Blindly explore US universities sized by the publications of their faculty in the selected venues within the specified time period.
+                <b>Clicking on a bubble</b> (which corresponds to a university) loads a stacked bar chart of the faculty (only their initials are shown) that made the publications, broken down
+                by the number of publications at each venue. <b>Clicking on a bar</b> opens a new tab with the corresponding faculty member's website, revealing their identify and the university they belong to.
+            </p>
         </div>
         <div id='controls'>
             <div id='selected-venues'>
             </div>
+            <div id='time-period'>
+            </div>
         </div>
         <div id='charts'>
-            <div id='bubble-chart-container'>
-                <h4> Universities Sized By Publications In Selected Venues</h3>
-                <div id='bubble-chart'></div>
+            <div id='bubble-chart-container' class='chart-container'>
+                <div id='bubble-chart' class='chart'></div>
             </div>
-            <div id='bar-chart-container'>
-                <h4> Faculty Publications By Selected Venues</h3>
-                <div id='bar-chart'></div>
+            <div id='bar-chart-container' class='chart-container'>
+                <div id='bar-chart' class='chart'></div>
             </div>
         </div>
     </main>
@@ -32,6 +37,7 @@
     <script src='js/utils.js'></script>
     <script src='js/data.js'></script>
     <script src='js/venues.js'></script>
+    <script src='js/time-period.js'></script>
     <script src='js/bubble-chart.js'></script>
     <script src='js/bar-chart.js'></script>
     <script src='js/index.js'></script>

@@ -2,26 +2,35 @@ const DataService = (function(){
     let authorInfo;
     let countryInfo;
     let venueInfo;
+    let bubbleChartData;
+    let facultyInfo;
+    let years = new Set();
 
     async function initialize() {
         authorInfo = await Utils.fetchJson('./data/generated-author-info.json');
         countryInfo = await Utils.fetchJson('./data/country-info.json');
         venueInfo = await Utils.fetchJson('./data/venue-info.json');
+        facultyInfo = await Utils.fetchJson('./data/csrankings.json')
     }
 
     function getVenues() {
         return venueInfo;
     }
 
-    function generateData() {
-        const selectedVenues = Venues.getSelected();
+    function getFacultyInfo(name) {
+        return facultyInfo[name];
+    }
+
+    function generateBubbleChartData({ selectedVenues }) {
         const keyedUniversityInfo = {};
         authorInfo.forEach(entry => {
             const university = entry.dept;
             const venue = entry.area;
             const venueCount = entry.count;
             const author = entry.name;
+            const year = entry.year;
             if (_isSelectedVenue({ selectedVenues, venue }) && _isUSUnversity(university)) {
+                years.add(year);
                 let universityEntry;
                 if (keyedUniversityInfo[university]) {
                     universityEntry = keyedUniversityInfo[university];
@@ -43,6 +52,7 @@ const DataService = (function(){
                     facultyEntry = universityEntry.faculty[author]
                 } else {
                     facultyEntry = {
+                        initials: author.split(" ").map(v => v[0]).join(""),
                         total: 0
                     };
                     selectedVenues.forEach(venue => {
@@ -69,8 +79,20 @@ const DataService = (function(){
                     faculty
                 }
             });
+
+        bubbleChartData = universityInfoArray;
         
         return universityInfoArray
+    }
+
+    function generateBarChartData({ university }) {
+        const barChartData = bubbleChartData.find(x => x.name === university).faculty;
+        barChartData.sort((a, b) => b.total - a.total);
+        return barChartData
+    }
+
+    function generateTimePeriod() {
+        return Array.from(years).sort();
     }
 
     function _isUSUnversity(university) {
@@ -84,6 +106,9 @@ const DataService = (function(){
     return {
         initialize,
         getVenues,
-        generateData
+        generateBubbleChartData,
+        generateBarChartData,
+        generateTimePeriod,
+        getFacultyInfo
     }
 })();
