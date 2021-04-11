@@ -1,4 +1,4 @@
-const DataService = (function(){
+const DataService = (() => {
     let authorInfo;
     let countryInfo;
     let venueInfo;

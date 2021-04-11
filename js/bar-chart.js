@@ -1,26 +1,27 @@
-const BarChart = (function() {
-    const width = 500;
-    const height = width;
+const BarChart = (() => {
+    const container = document.querySelector("#bar-chart");
+    const width = container.clientWidth;
+    const height = container.clientHeight;
     const margin = { top: 30, right: 10, bottom: 0, left: 30 };
-    const svg = d3.select("#bar-chart")
+    const svg = d3.select(container)
         .append("svg")
         .attr("viewBox", [0, 0, width, height]);
-    const xAxis =  svg.append("g");
-    const yAxis = svg.append("g");
-    const stackContainer = svg.append("g");
-    const legend = svg.append("g")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
-        .attr("text-anchor", "end")
-
+  
     function render({ data, selectedVenues }) {
-        console.log(data)
         const series = _series(data);
         const color = _color(series.map(d => d.key));
         const legendColor = _color(selectedVenues);
         const x = _x({ series, width });
         const y = _y({ data, height });
 
+        const xAxis =  svg.append("g");
+        const yAxis = svg.append("g");
+        const stackContainer = svg.append("g");
+        const legend = svg.append("g")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 10)
+            .attr("text-anchor", "end")
+        
         stackContainer
             .selectAll("g")
             .data(series)
@@ -80,8 +81,13 @@ const BarChart = (function() {
         legendGroup.append("text")
             .attr("x", 0)
             .attr("y", 10)
+            .attr("fill", "white")
             .text(d => Venues.getLabel(d));
                     
+    }
+
+    function clear() {
+        d3.select(container).selectAll("svg > *").remove();
     }
 
     function _series(data) {
@@ -128,6 +134,7 @@ const BarChart = (function() {
     }
 
     return {
-        render
+        render,
+        clear
     }
 })()

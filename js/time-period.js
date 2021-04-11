@@ -1,4 +1,4 @@
-const TimePeriod = (function(){
+const TimePeriod = (() => {
     let years;
     function initialize(data) {
         years = data;

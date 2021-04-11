@@ -3,6 +3,8 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
 }
 
 main {
@@ -12,32 +14,24 @@ main {
     flex-direction: column;
 }
 
-main * {
-    padding: 2.5px;
-    margin: 2.5px;
-}
-
 main > * {
     width: 100%;
-}
-
-#charts {
-    display: flex;
+    padding: 2.5px;
+    margin: 2.5px;
 }
 
 .chart-container {
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 500px;
+    flex: 1;
 }
 
 #bubble-chart-container {
-    flex: 55%;
+    flex: 0.7;
 }
 
 #bar-chart-container {
-    flex: 45%;
+    flex: 0.3;
 }
 
 .chart {
@@ -51,10 +45,14 @@ main > * {
 
 #selected-venues {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #time-period {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #charts h4 {
@@ -65,7 +63,6 @@ main > * {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
     vertical-align: top;
     overflow: hidden;
 }
@@ -74,4 +71,25 @@ main > * {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.hover-state:hover {
+    cursor: pointer;
+}
+
+#selections-and-charts {
+    display: flex;
+    height: 100%;
+    flex: 1
+}
+
+#selections-and-charts > * {
+    padding: 2.5px;
+    margin: 2.5px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

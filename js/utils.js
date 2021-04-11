@@ -1,4 +1,4 @@
-const Utils = (function(){
+const Utils = (() => {
     const { DOM } = new observablehq.Library;
 
     function fetchJson(url) {

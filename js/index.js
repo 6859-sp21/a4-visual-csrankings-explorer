@@ -1,4 +1,4 @@
-(async function(){
+(async () => {
     await DataService.initialize();
     const venues = DataService.getVenues();
     Venues.initialize(venues);
