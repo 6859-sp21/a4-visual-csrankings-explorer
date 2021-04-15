@@ -2,135 +2,98 @@ const BarChart = (() => {
     const container = document.querySelector("#bar-chart");
     const width = container.clientWidth;
     const height = container.clientHeight;
-    const margin = { top: 30, right: 10, bottom: 0, left: 30 };
+    const margin = { top: 30, right: 10, bottom: 0, left: 35 };
     const svg = d3.select(container)
         .append("svg")
         .attr("viewBox", [0, 0, width, height]);
+    const rectGroup = svg.append("g");
+    const textGroup = svg.append("g")
+        .attr("text-anchor", "end")
+        .attr("font-family", "sans-serif");
+    const yAxis = svg.append("g");
+    let selectedBar;
   
-    function render({ data, selectedVenues }) {
-        const series = _series(data);
-        const color = _color(series.map(d => d.key));
-        const legendColor = _color(selectedVenues);
-        const x = _x({ series, width });
+    function render({ data }) {
+        if (!selectedBar) {
+            selectedBar = data[0];
+            selectedBar.selected = true;
+        } else if (!data.find(d => d.name === selectedBar.name)) {
+             delete selectedBar.selected;
+             selectedBar = data[0];
+             selectedBar.selected = true;
+        }
+        const x = _x({ data, width });
         const y = _y({ data, height });
+        const format = x.tickFormat(20, data.format);
 
-        const xAxis =  svg.append("g");
-        const yAxis = svg.append("g");
-        const stackContainer = svg.append("g");
-        const legend = svg.append("g")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", 10)
-            .attr("text-anchor", "end")
+        rectGroup
+          .selectAll("rect")
+          .data(data, d => d.name)
+          .join(   
+            enter => enter.append("rect"),
+            update => update,
+            exit => exit.remove()
+          )
+            .attr("stroke", Utils.Colors.WHITE)
+            .attr("fill", d => d.selected ? Utils.Colors.WHITE : Utils.Colors.GREY)
+            .attr("x", x(0))
+            .attr("y", (d, i) => y(i))
+            .attr("width", d => x(d.total) - x(0))
+            .attr("height", y.bandwidth());
         
-        stackContainer
-            .selectAll("g")
-            .data(series)
-            .join(
-                enter =>  {
-                    return enter
-                        .append("g")
-                            .attr("fill", d => color(d.key))
-                        .selectAll("rect")
-                            .data(d => d)
-                            .join(
-                                enter => enter
-                                    .append("rect")
-                                        .attr("x", d => x(d[0]))
-                                        .attr("y", d => y(d.data.initials))
-                                        .attr("width", d => x(d[1]) - x(d[0]))
-                                        .attr("height", y.bandwidth())
-                                ,
-                                update => update,
-                                exit => exit.remove()
-                            )
-                            .on("click", (event, d) => {
-                                const facultyData = DataService.getFacultyInfo(d.data.name);
-                                const homepage = facultyData[0].homepage;
-                                window.open(homepage, '_blank');
-                            })
-                },
-                update => {
-                    return update;
-                },
-                exit => {
-                    return exit.remove();
-                }
-            )
+        textGroup
+          .selectAll("text")
+          .data(data, d => d.name)
+          .join(   
+            enter => enter.append("text"),
+            update => update,
+            exit => exit.remove()
+          )
+            .attr("fill", d => d.selected ? Utils.Colors.GREY : Utils.Colors.WHITE)
+            .attr("x", d => x(d.total))
+            .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
+            .attr("dy", "0.35em")
+            .attr("dx", -8)
+            .text(d => format(d.total))
+          .call(text => text.filter(d => x(d.total) - x(0) < 20) // short bars
+            .attr("dx", +4)
+            .attr("text-anchor", "start"));
 
-        xAxis.call(_xAxis.bind(null, { x, width}));  
-        yAxis.call(_yAxis.bind(null, { y }));
-    
-        const legendGroup = legend.selectAll("g")
-            .data(selectedVenues)
-            .join(
-                enter => {
-                    return enter.append("g")
-                },
-                update => update,
-                exit => exit.remove()
-            )
-            .attr("transform", (d, i) => `translate(${width - 20}, ${height - (i+ 1)*11})`);
-    
-        legendGroup.append("rect")
-            .attr("x", 12)
-            .attr("y", 0)
-            .attr("width", 10)
-            .attr("height", 10)
-            .attr("fill", legendColor);
-    
-        legendGroup.append("text")
-            .attr("x", 0)
-            .attr("y", 10)
-            .attr("fill", "white")
-            .text(d => Venues.getLabel(d));
-                    
+        // xAxis.call(_xAxis.bind(null, { x, data, width}));  
+        yAxis.call(_yAxis.bind(null, { y, data }));                    
     }
 
     function clear() {
         d3.select(container).selectAll("svg > *").remove();
     }
 
-    function _series(data) {
-        const sample = data[0];
-        const exclude = ['name', 'total', 'initials'];
-        const keys = Object.keys(sample).filter(key =>  !exclude.includes(key));
-        return d3.stack()
-            .keys(keys)
-            (data)
-            .map(d => (d.forEach(v => v.key = d.key), d))
-    }
-
     function _y({ data, height }) {
         return d3.scaleBand()
-            .domain(data.map(d => d.initials))
-            .range([margin.top, height - margin.bottom])
-            .padding(0.08)
+            .domain(d3.range(data.length))
+            .rangeRound([margin.top, height - margin.bottom])
+            .padding(0.1)
     }
 
-    function _x({ series, width } ) {
+    function _x({ data, width } ) {
         return d3.scaleLinear()
-            .domain([0, d3.max(series, d => d3.max(d, d => d[1]))])
+            .domain([0, d3.max(data, d => d.total)])
             .range([margin.left, width - margin.right])
     }
 
-    function _color(data) {
-        return d3.scaleOrdinal()
-            .domain(data)
-            .range(d3.schemeTableau10.slice(0, 8))
-            .unknown("#ccc")
-    }
-
-    function _xAxis({ x, width }, g) {
+    function _xAxis({ x, data, width }, g) {
         return g.attr("transform", `translate(0,${margin.top})`)
-            .call(d3.axisTop(x).ticks(width / 100, "s"))
+            .call(d3.axisTop(x).ticks(width / 80, data.format))
             .call(g => g.selectAll(".domain").remove())
     }
 
-    function _yAxis({ y }, g) {
+    function _yAxis({ y, data }, g) {
         return g
-            .attr("transform", `translate(${margin.left},0)`)
-            .call(d3.axisLeft(y).tickSizeOuter(0))
-            .call(g => g.selectAll(".domain").remove())
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y).tickFormat(i => data[i].initials).tickSizeOuter(0))
+    }
+
+    function _format(data) {
+        return x.tickFormat(20, data.format)
     }
 
     return {

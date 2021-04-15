@@ -11,7 +11,7 @@ const BubbleChart = (() => {
             .attr("text-anchor", "middle");
     let selectedBubble;
 
-    function render({ data, selectedVenues }) {
+    function render({ data }) {
         const root = _pack({ data });    
         const leaf = svg.selectAll("g")
             .data(root.leaves(), d => d.name)
@@ -29,7 +29,6 @@ const BubbleChart = (() => {
                 const g = d3.select(this);
                 const currCircle = g.select("circle");
                 const currText = g.select("text");
-                BarChart.clear();
                 if (selectedBubble) {
                     const prevCircle = selectedBubble.select("circle");
                     const prevText = selectedBubble.select("text");
@@ -40,8 +39,7 @@ const BubbleChart = (() => {
                     BarChart.render({ 
                         data: DataService.generateBarChartData({ 
                             university: d.data.name
-                        }), 
-                        selectedVenues 
+                        })
                     });
                 } else {
                     selectedBubble = g;
@@ -50,8 +48,7 @@ const BubbleChart = (() => {
                     BarChart.render({ 
                         data: DataService.generateBarChartData({ 
                             university: d.data.name
-                        }), 
-                        selectedVenues 
+                        })
                     });
 
                 }
@@ -86,8 +83,8 @@ const BubbleChart = (() => {
         circle
             .attr("id", d => (d.leafUid = Utils.DOM.uid("leaf")).id)
             .attr("r", d => d.r)
-            .attr("stroke", "white")
-            .attr("fill", d => d.data.selected ? "white" : "#262626")
+            .attr("stroke", Utils.Colors.WHITE)
+            .attr("fill", d => d.data.selected ? Utils.Colors.WHITE : Utils.Colors.GREY)
             
         
         circle
@@ -99,7 +96,7 @@ const BubbleChart = (() => {
         const text = leaf.append("text");
 
         text
-            .attr("fill", d => d.data.selected ? "#262626" : "white")
+            .attr("fill", d => d.data.selected ? Utils.Colors.GREY : Utils.Colors.WHITE)
             .attr("text-anchor", "middle")
             .attr("dy", ".2em")
             .attr("font-size", d => d.r / 1.5)
@@ -115,7 +112,18 @@ const BubbleChart = (() => {
 
         const tooltip = leaf.append("title");
         tooltip
-            .text(d => `${format(d.data.total)} publication(s)`);
+            .text(d => `${format(d.data.total)} publication(s), click for details`);
+
+        if (selectedBubble) {
+            const university = selectedBubble.datum().data.name;
+            if (university) {
+                BarChart.render({ 
+                    data: DataService.generateBarChartData({ 
+                        university
+                    })
+                });
+            }
+        }
     }
 
     function _pack({ data }){
@@ -132,14 +140,14 @@ const BubbleChart = (() => {
 
     function _setBubbleActiveState(g, circle ,text) {
         g.classed("hover-state", true);
-        text.attr("fill", "#262626");
-        circle.attr("fill", "white")
+        text.attr("fill", Utils.Colors.GREY);
+        circle.attr("fill", Utils.Colors.WHITE)
     }
 
     function _setBubbleInactiveState(g, circle, text) {
         g.classed("hover-state", false);
-        text.attr("fill", "white");
-        circle.attr("fill", "#262626")
+        text.attr("fill", Utils.Colors.WHITE);
+        circle.attr("fill", Utils.Colors.GREY)
     }
 
     return {

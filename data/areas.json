@@ -1,0 +1,25 @@
+{
+    "Artificial Intelligence": [
+        "aaai",
+        "ijcai"
+    ],
+    "Computer Vision": [
+        "cvpr",
+        "eccv",
+        "iccv"
+    ],
+    "Machine Learning & Data Mining": [
+        "icml",
+        "kdd",
+        "nips"
+    ],
+    "Natural Language Processing": [
+        "acl",
+        "emnlp",
+        "naacl"
+    ],
+    "The Web & Information Retrieval": [
+        "sigir",
+        "www"
+    ]
+}
