@@ -18,7 +18,6 @@ const DataService = (() => {
         return Object.keys(areasInfo).sort();
     }
 
-
     function getFacultyInfo(name) {
         return facultyInfo[name];
     }
@@ -81,6 +80,8 @@ const DataService = (() => {
                     faculty
                 }
             });
+
+        universityInfoArray.sort((a, b) => b.total - a.total )
 
         bubbleChartData = universityInfoArray;
         

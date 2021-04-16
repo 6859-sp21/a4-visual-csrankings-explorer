@@ -21,5 +21,104 @@
     "The Web & Information Retrieval": [
         "sigir",
         "www"
+    ],
+    "Computer Architecture": [
+        "asplos",
+        "isca",
+        "micro"
+    ],
+    "Computer Networks": [
+        "sigcomm",
+        "nsdi"
+    ],
+    "Computer Security": [
+        "ccs",
+        "oakland",
+        "usenixsec",
+        "ndss"
+    ],
+    "Databases": [
+        "sigmod",
+        "vldb",
+        "icde",
+        "pods"
+    ],
+    "Design Automation": [
+        "dac",
+        "iccad"
+    ],
+    "Embedded & Real-time Systems": [
+        "emsoft",
+        "rtas",
+        "rtss"
+    ],
+    "High-performance Computing": [
+        "hpdc",
+        "ics",
+        "sc"
+    ],
+    "Mobile Computing": [
+        "mobicom",
+        "mobisys",
+        "sensys"
+    ],
+    "Measurement & Performance Analysis": [
+        "imc",
+        "sigmetrics"
+    ],
+    "Operating Systems": [
+        "osdi",
+        "sosp"
+    ],
+    "Programming Languages": [
+        "pldi",
+        "popl",
+        "icfp",
+        "oopsla"
+    ],
+    "Software Engineering": [
+        "fse",
+        "icse",
+        "ase",
+        "issta"
+    ],
+    "Algorithms & Complexity": [
+        "focs",
+        "soda",
+        "stoc"
+    ],
+    "Cryptography": [
+        "crypto",
+        "eurocrypt"
+    ],
+    "Logic & Verification": [
+        "cav",
+        "lics"
+    ],
+    "Computational Biology & Bioinformatics": [
+        "ismb",
+        "recomb"
+    ],
+    "Computer Graphics": [
+        "siggraph",
+        "siggraph-asia"
+    ],
+    "Economics & Computation": [
+        "ec",
+        "wine"
+    ],
+    "Human-Computer Interaction": [
+        "chiconf",
+        "ubicomp",
+        "uist"
+    ],
+    "Robotics": [
+        "icra",
+        "iros",
+        "rss"
+    ],
+    "Visualization": [
+        "vis",
+        "vr"
     ]
 }

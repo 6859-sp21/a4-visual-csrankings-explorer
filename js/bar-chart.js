@@ -3,30 +3,29 @@ const BarChart = (() => {
     const width = container.clientWidth;
     const height = container.clientHeight;
     const margin = { top: 30, right: 10, bottom: 0, left: 35 };
+    const format = d3.format(",d");
+
     const svg = d3.select(container)
         .append("svg")
         .attr("viewBox", [0, 0, width, height]);
-    const rectGroup = svg.append("g");
+
+    const rectGroup = svg.append("g")
+        .attr("id", "rectGroup");
+    
     const textGroup = svg.append("g")
+        .attr("id", "textGroup")
         .attr("text-anchor", "end")
         .attr("font-family", "sans-serif");
+
     const yAxis = svg.append("g");
+
     let selectedBar;
   
     function render({ data }) {
-        if (!selectedBar) {
-            selectedBar = data[0];
-            selectedBar.selected = true;
-        } else if (!data.find(d => d.name === selectedBar.name)) {
-             delete selectedBar.selected;
-             selectedBar = data[0];
-             selectedBar.selected = true;
-        }
         const x = _x({ data, width });
         const y = _y({ data, height });
-        const format = x.tickFormat(20, data.format);
 
-        rectGroup
+        const rect = rectGroup
           .selectAll("rect")
           .data(data, d => d.name)
           .join(   
@@ -34,13 +33,36 @@ const BarChart = (() => {
             update => update,
             exit => exit.remove()
           )
+            .attr("id", (d, i) => `rect${i}`)
             .attr("stroke", Utils.Colors.WHITE)
-            .attr("fill", d => d.selected ? Utils.Colors.WHITE : Utils.Colors.GREY)
+            .attr("fill", Utils.Colors.GREY)
             .attr("x", x(0))
             .attr("y", (d, i) => y(i))
             .attr("width", d => x(d.total) - x(0))
-            .attr("height", y.bandwidth());
+            .attr("height", y.bandwidth())
         
+        rect
+            .on("click", function() {
+                const bar = d3.select(this);
+                if (selectedBar) {
+                    _unSelectBar({ selectedBar });
+                }
+                selectedBar = bar;
+                _selectBar({ selectedBar });
+                _openFacultyWebsite({ selectedBar });
+            })
+            .on("mouseenter", (event) => {
+                _mouseEvent({ event, enter: true })
+
+            })
+            .on("mouseleave", (event) => {
+                _mouseEvent({ event, enter: false })
+            });
+
+        rect
+            .append("title")
+            .text(d => `Faculty member has ${format(d.total)} publication(s), click to visit faculty member's website.`);
+
         textGroup
           .selectAll("text")
           .data(data, d => d.name)
@@ -49,22 +71,67 @@ const BarChart = (() => {
             update => update,
             exit => exit.remove()
           )
-            .attr("fill", d => d.selected ? Utils.Colors.GREY : Utils.Colors.WHITE)
+            .attr("id", (d, i) => `text${i}`)
+            .attr("fill", Utils.Colors.WHITE)
             .attr("x", d => x(d.total))
             .attr("y", (d, i) => y(i) + y.bandwidth() / 2)
             .attr("dy", "0.35em")
             .attr("dx", -8)
-            .text(d => format(d.total))
+            .text(d => d.total)
           .call(text => text.filter(d => x(d.total) - x(0) < 20) // short bars
             .attr("dx", +4)
             .attr("text-anchor", "start"));
 
-        // xAxis.call(_xAxis.bind(null, { x, data, width}));  
-        yAxis.call(_yAxis.bind(null, { y, data }));                    
+        yAxis.call(_yAxis.bind(null, { y, data }));
+
+        _renderFacultyDetails();
     }
 
     function clear() {
-        d3.select(container).selectAll("svg > *").remove();
+        d3.select(container).selectAll("svg > g > *").remove();
+        const facultyDetails = document.querySelector("#faculty-details");
+        if (facultyDetails) {
+            facultyDetails.remove();
+        }
+    }
+
+    function _renderFacultyDetails() {
+        const template = document.querySelector("#faculty-details-template");
+        const clone = template.content.cloneNode(true);
+        container.parentElement.prepend(clone);
+    }
+
+    function _openFacultyWebsite({ selectedBar }) {
+        const data = selectedBar.datum();
+        const facultyInfo = DataService.getFacultyInfo(data.name)[0];
+        window.open(facultyInfo.homepage, "_blank");
+    }
+
+    function _mouseEvent({ event, enter }) {
+        const bar = d3.select(event.target);
+        if (!selectedBar || (selectedBar && selectedBar.node() != bar.node())) {
+            if (enter) {
+                _selectBar({ selectedBar: bar });
+            } else {
+                _unSelectBar({ selectedBar: bar });
+            }
+        }
+    }
+
+    function _selectBar({ selectedBar }) {
+        selectedBar.attr("fill", Utils.Colors.WHITE);
+        selectedBar.classed("hover-state", true);
+        const id = selectedBar.attr("id").split("rect")[1];
+        const textLabel = textGroup.select(`#text${id}`);
+        textLabel.attr("fill", Utils.Colors.GREY);
+    }
+
+    function _unSelectBar({ selectedBar }) {
+        selectedBar.attr("fill", Utils.Colors.GREY);
+        selectedBar.classed("hover-state", false);
+        const id = selectedBar.attr("id").split("rect")[1];
+        const textLabel = textGroup.select(`#text${id}`);
+        textLabel.attr("fill", Utils.Colors.WHITE);
     }
 
     function _y({ data, height }) {
@@ -80,20 +147,10 @@ const BarChart = (() => {
             .range([margin.left, width - margin.right])
     }
 
-    function _xAxis({ x, data, width }, g) {
-        return g.attr("transform", `translate(0,${margin.top})`)
-            .call(d3.axisTop(x).ticks(width / 80, data.format))
-            .call(g => g.selectAll(".domain").remove())
-    }
-
     function _yAxis({ y, data }, g) {
         return g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).tickFormat(i => data[i].initials).tickSizeOuter(0))
-    }
-
-    function _format(data) {
-        return x.tickFormat(20, data.format)
     }
 
     return {

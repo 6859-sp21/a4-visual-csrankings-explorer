@@ -7,21 +7,25 @@ const Areas = (() => {
 
     function render() {
         const selectedAreas = document.querySelector("#selected-areas");
-        const template = document.querySelector("template#area-checkbox");
-        areas.forEach(area => {
+        const template = document.querySelector("#area-checkbox-template");
+        const randomAreaIndex = Math.floor(Math.random() * areas.length);
+        const header = document.createElement("h6");
+        header.textContent = "Research Areas";
+        selectedAreas.append(header);
+        areas.forEach((area, i) => {
             const clone = template.content.cloneNode(true);
             const checkbox = clone.querySelector("input");
             checkbox.value = area;
-            checkbox.checked = true;
-            checkbox.addEventListener("change", (event) => {
+            checkbox.checked = i === randomAreaIndex ? true : false;
+            checkbox.addEventListener("change", () => {
                 const selectedAreas = getSelected();
                 const { fromYear, toYear } = TimePeriod.getYears();
-                const bubbleChartData = DataService.generateBubbleChartData({ selectedAreas });
-                BubbleChart.render({
-                    data: bubbleChartData,
+                const bubbleChartData = DataService.generateBubbleChartData({ 
+                    selectedAreas,
                     fromYear,
                     toYear 
-                });
+                 });
+                BubbleChart.render({ data: bubbleChartData });
             });
             const label = clone.querySelector("label");
             label.textContent = area;

@@ -18,7 +18,7 @@ const TimePeriod = (() => {
         });
         const fromSelectLabel = _createLabel({
             forElement: 'from-year',
-            text: "US universities sized by faculty's academic publications from"
+            text: "Anonymized US universities sized by faculty's academic publications from"
         });
         const toSelectLabel = _createLabel({
             forElement: 'to-year',
@@ -73,7 +73,7 @@ const TimePeriod = (() => {
             fromYear, 
             toYear 
         });
-        BubbleChart.render({ data: bubbleChartData, selectedAreas });
+        BubbleChart.render({ data: bubbleChartData });
     }
     return {
         render,
